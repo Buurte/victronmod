@@ -169,7 +169,7 @@ def new_service(base, type, physical, logical, id, instance, settingId = False):
     # Create the mandatory objects, note these may need to be customised after object creation
     self.add_path('/DeviceInstance', instance)
     self.add_path('/ProductId', 0)
-    self.add_path('/ProductName', '')
+    self.add_path('/ProductName', 'testing')
     self.add_path('/FirmwareVersion', platform.system())
     self.add_path('/HardwareVersion', getrevision())
     self.add_path('/Connected', 0)  # Mark devices as disconnected until they are confirmed
