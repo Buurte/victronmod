@@ -181,6 +181,7 @@ def new_service(base, type, physical, logical, id, instance, settingId = False):
         print("no setting required")
         setting = ""
     if type == 'temperature':
+        self.add_path('/test', 0)
         self.add_path('/Temperature', [])
         self.add_path('/Status', 0)
         if settingId:
