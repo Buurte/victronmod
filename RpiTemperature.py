@@ -185,10 +185,8 @@ def new_service(base, type, physical, logical, id, instance, settingId = False):
         self.add_path('/Temperature', [])
         self.add_path('/Status', 0)
         if settingId:
-            addSetting(setting , '/testtype', self)
             addSetting(setting , '/TemperatureType', self)
             addSetting(setting , '/CustomName', self)
-        self.add_path('/test', 2, writeable=True, onchangecallback = lambda x,y: handle_changed_value(setting,x,y) )
         self.add_path('/TemperatureType', 2, writeable=True, onchangecallback = lambda x,y: handle_changed_value(setting,x,y) )
         self.add_path('/CustomName', '', writeable=True, onchangecallback = lambda x,y: handle_changed_value(setting,x,y) )
         self.add_path('/Function', 1, writeable=True )
