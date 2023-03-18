@@ -203,7 +203,7 @@ base = 'com.victronenergy'
 dbus_cpu_service   = new_service(base, 'temperature', 'RpiCpu',  'Raspberry Pi OS',  6, 29,6)
 
 # Tidy up custom or missing items
-dbus_cpu_service['/ProductName']     = 'Raspberry Pi2'
+dbus_cpu_service['/ProductName']     = 'Raspberry Pi'
 dbus_cpu_service['/CustomName']     = 'CPU Temperature'
 
 # Persistent settings obejects in settingsDevice will not exist before this is executed
