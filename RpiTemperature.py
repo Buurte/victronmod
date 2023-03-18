@@ -169,7 +169,7 @@ def new_service(base, type, physical, logical, id, instance, settingId = False):
     # Create the mandatory objects, note these may need to be customised after object creation
     self.add_path('/DeviceInstance', instance)
     self.add_path('/ProductId', 0)
-    self.add_path('/ProductName', 'testing')
+    self.add_path('/ProductName', '')
     self.add_path('/FirmwareVersion', 'ubuntu')
     self.add_path('/HardwareVersion', getrevision())
     self.add_path('/Connected', 0)  # Mark devices as disconnected until they are confirmed
@@ -181,7 +181,6 @@ def new_service(base, type, physical, logical, id, instance, settingId = False):
         print("no setting required")
         setting = ""
     if type == 'temperature':
-        self.add_path('/test', 0)
         self.add_path('/Temperature', [])
         self.add_path('/Status', 0)
         if settingId:
